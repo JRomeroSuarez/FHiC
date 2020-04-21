@@ -71,6 +71,14 @@ h4, .h4 {
   }
 }
 
+.potato {
+  font-size: large
+}
+
+.potutu {
+  margin-top: 10px;
+}
+
 .primary-text {
   color: #e22104
 }

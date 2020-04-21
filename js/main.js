@@ -87,8 +87,25 @@ $(function() {
         })
     }
 
+    $('[data-toggle="popover"]').popover();
 
+    var restArr = [
+        {
+            "restName": "Ca la Pepi",
+            "imgUrl": "./img/logo.png"
+        },
+        {
+            "restName": "Ca la Pepa",
+            "imgUrl": "./img/logo.png"
+        },{
+            "restName": "Ca la Pepu",
+            "imgUrl": "./img/logo.png"
+        }
+    ];
 
+    restArr.forEach(restInfo => {
+        $("#restaurant-list").append('<li><div class="card" style="display: inline-block;" ><img src="'+restInfo.imgUrl+'"/></div><div class="card" style="display: inline-block;" ><h2>'+restInfo.restName+'</h2></div></li>');
+    });
   
 });
 
