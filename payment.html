@@ -5,14 +5,17 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="x-ua-compatible" content="IE=edge,chrome=1" />
+
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link rel="icon" href="img/logo.ico">
 
   <title>Pagament</title>
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
 
@@ -21,6 +24,12 @@
 
   <!-- Custom styles for this template -->
   <link href="form-validation.css" rel="stylesheet">
+
+
+  <script>
+    jQuery.noConflict();
+    // Code that uses other library's $ can follow here.
+  </script>
 </head>
 
 
@@ -32,41 +41,41 @@
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-muted">Your cart</span>
+          <span class="text-muted">Tu carrito</span>
           <span class="badge badge-secondary badge-pill">3</span>
         </h4>
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0">Nombre del producto</h6>
+              <small class="text-muted">Descripcion del producto</small>
             </div>
-            <span class="text-muted">$12</span>
+            <span class="text-muted">12€</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Second product</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0">Segundo producto</h6>
+              <small class="text-muted">Descripcion del producto</small>
             </div>
-            <span class="text-muted">$8</span>
+            <span class="text-muted">8€</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0">Tercer producto</h6>
+              <small class="text-muted">Descripcion del producto</small>
             </div>
-            <span class="text-muted">$5</span>
+            <span class="text-muted">5€</span>
           </li>
           <li class="list-group-item d-flex justify-content-between bg-light">
             <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
+              <h6 class="my-0">Codigo de promocion</h6>
               <small>EXAMPLECODE</small>
             </div>
-            <span class="text-success">-$5</span>
+            <span class="text-success">-5€</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
+            <span>Total (EUR)</span>
+            <strong>20€</strong>
           </li>
         </ul>
 
@@ -74,7 +83,7 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Promo code">
             <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary">Redeem</button>
+              <button type="submit" class="btn btn-secondary">CANJEAR</button>
             </div>
           </div>
         </form>
@@ -84,7 +93,7 @@
         <form class="needs-validation" novalidate="">
           <div class="mb-3">
             <label for="firstName">Nombre y apellido</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <input type="text" class="form-control" id="firstName" placeholder="Pepe Flores" value="" required="">
             <div class="invalid-feedback">
               Por favor introduce tu nombre
             </div>
@@ -119,7 +128,7 @@
 
             <div class="col-md-4 mb-2">
               <label for="zip">Codigo Postal</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <input type="text" class="form-control" id="zip" placeholder="00000" required="">
               <div class="invalid-feedback">
                 Codigo postal requerido
               </div>
@@ -129,7 +138,7 @@
 
           <h4 class="mb-3">Pago</h4>
 
-
+          <!-- FORMAS DE PAGO -->
 
           <article class="card">
             <div class="card-body p-5">
@@ -157,7 +166,7 @@
                     <div class="form-group">
                       <label for="cardNumber">Numero Tarjeta</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="cardNumber" placeholder="0000 0000 0000 0000 ">
+                        <input type="text" class="form-control" name="cardNumber" placeholder="0000 0000 0000 0000 " required>
                         <div class="input-group-append">
                           <span class="input-group-text text-muted">
                             <i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>  
@@ -171,26 +180,28 @@
                       <div class="col-sm-8">
                         <div class="form-group">
                           <label><span class="hidden-xs">Data de expiración</span> </label>
-                          <div class="input-group">
-                            <input type="number" class="form-control" placeholder="MM" name="">
-                            <input type="number" class="form-control" placeholder="YY" name="">
+                          <div class='input-group date' id='startDate'>
+                            <input type='month' class="form-control" name="startDate" required value="2020-04" min="2000-01" max="2024-01">
+                            <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="form-group">
                           <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                          <input type="number" class="form-control" required="">
+                          <input type="text" class="form-control" required="" max = 999>
                         </div> <!-- form-group.// -->
                       </div>
                     </div> <!-- row.// -->
-                    <button class="subscribe btn btn-primary btn-block" type="button"> Confirm </button>
+                    <button class="subscribe btn btn-primary btn-block" type="submit" formaction="finalizado.html"> Confirmar pedido</button>
                   </form>
                 </div> <!-- tab-pane.// -->
                 <div class="tab-pane fade" id="nav-tab-paypal">
-                  <p>Paypal is easiest way to pay online</p>
+                  <p>Paypal, la forma mas facil de pagar online</p>
                   <p>
-                    <button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Log in my Paypal </button>
+                    <button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Inicar sesion en PayPal </button>
                   </p>
                   <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -240,6 +251,18 @@
         }, false);
       })();
     </script>
+
+    <script>
+      jQuery(function() {
+        jQuery('#startDate').datetimepicker();
+        jQuery("#startDate").on("dp.change", function(e) {
+          jQuery('#endDate').data("DateTimePicker").setMinDate(e.date);
+        });
+
+      });
+    </script>
+
+
 
 
 
