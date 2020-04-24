@@ -2704,7 +2704,7 @@ h4, .h4 {
   display: inline-block;
   background-color: #e22104;
   color: #fff;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   border-radius: 30px;
   padding: 9px 25px;
@@ -2732,7 +2732,12 @@ h4, .h4 {
 }
 
 .button-hero {
-  align-self: center
+  align-self: center;
+  margin-bottom: 60px;
+}
+
+.button-hero-reserve {
+  margin-top: 5px;
 }
 
 @media (max-width: 845px) {
@@ -2751,6 +2756,12 @@ button.button {
 
 .button-contactForm {
   border-radius: 5px
+}
+
+.reserve-text {
+  font-size: 20px;
+  padding-right: 10px;
+  margin-top: 15px;
 }
 
 .footer-area {
