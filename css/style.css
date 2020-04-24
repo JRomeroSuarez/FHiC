@@ -79,6 +79,11 @@ h4, .h4 {
   margin-top: 10px;
 }
 
+.rest-logo {
+  height: 128 px;
+  width: 128px;
+}
+
 .primary-text {
   color: #e22104
 }

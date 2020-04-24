@@ -1,3 +1,13 @@
+var filterOptions = {
+    "free_delivery": false,
+    "open_time": 0,
+    "hasOffers": false,
+    "above5Stars": false
+}
+
+var showAll = true;
+
+
 $(function() {
   "use strict";
 
@@ -89,22 +99,135 @@ $(function() {
 
     $('[data-toggle="popover"]').popover();
 
+
     var restArr = [
         {
             "restName": "Ca la Pepi",
-            "imgUrl": "./img/logo.png"
+            "imgUrl": "./img/restaurant_logo_1.png",
+            "free_delivery": true,
+            "open_time": 9,
+            "hasOffers": true,
+            "above5Stars": true,
+            "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },
         {
             "restName": "Ca la Pepa",
-            "imgUrl": "./img/logo.png"
+            "imgUrl": "./img/restaurant_logo_2.png",
+            "free_delivery": false,
+            "open_time": 9,
+            "hasOffers": true,
+            "above5Stars": false,
+            "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },{
             "restName": "Ca la Pepu",
-            "imgUrl": "./img/logo.png"
+            "imgUrl": "./img/restaurant_logo_1.png",
+            "free_delivery": false,
+            "open_time": 9,
+            "hasOffers": false,
+            "above5Stars": false,
+            "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
+        },{
+            "restName": "Ca la Pepu",
+            "imgUrl": "./img/restaurant_logo_1.png",
+            "free_delivery": true,
+            "open_time": 9,
+            "hasOffers": true,
+            "above5Stars": false,
+            "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
+        },{
+            "restName": "Ca la Pepu",
+            "imgUrl": "./img/restaurant_logo_1.png",
+            "free_delivery": false,
+            "open_time": 9,
+            "hasOffers": true,
+            "above5Stars": true,
+            "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         }
     ];
 
-    restArr.forEach(restInfo => {
-        $("#restaurant-list").append('<li><div class="card" style="display: inline-block;" ><img src="'+restInfo.imgUrl+'"/></div><div class="card" style="display: inline-block;" ><h2>'+restInfo.restName+'</h2></div></li>');
+    function renderRest(){
+
+        $("#restaurant-list").empty();
+
+        restArr.forEach(restInfo => {
+            let added = false;
+            Object.keys(filterOptions).forEach(propName => {
+                if(!added && (filterOptions[propName] && restInfo[propName] || showAll)){
+                    $("#restaurant-list").append(
+                        '<li><div class="row"><div class="container"><a href="./restaurant/1.html"><img src="'+restInfo.imgUrl+'" class="rest-logo" /><div class="media align-items-center food-card col-lg-8" style="display: inline-block;" ><h4>'+restInfo.restName+'</h4><p>blablablalba hrsgdsj srghjsrr rhgrghr grrg rg rgsg s g srgrgrhgsg</p></div></a><a href="https://www.google.com/maps/search/?api=1&query='+restInfo.direction.replace(/ /g,'+').replace(/,/g,'%2C')+'"><img src="./img/map.png"/></a></div></div></li>'
+                    );
+                    added = true;
+                }
+            });
+        });
+    }
+    
+    renderRest();
+
+    $("#defaultCheck1").click(function(){
+        var id = parseInt($(this).val(), 10);
+        if($(this).is(":checked")) {
+            $( "#defaultCheckAll" ).prop( "checked", false );
+            filterOptions.free_delivery = true;
+            showAll = false;
+        } else {
+            // checkbox is not checked -> do something different
+            filterOptions.free_delivery = false;
+        }
+        renderRest();
+    });
+
+    $("#defaultCheck2").click(function(){
+        var id = parseInt($(this).val(), 10);
+        if($(this).is(":checked")) {
+            $( "#defaultCheckAll" ).prop( "checked", false );
+            filterOptions.open_time = true;
+            showAll = false;
+        } else {
+            // checkbox is not checked -> do something different
+            filterOptions.open_time = false;
+        }
+        renderRest();
+    });
+
+    $("#defaultCheck3").click(function(){
+        var id = parseInt($(this).val(), 10);
+        if($(this).is(":checked")) {
+            $( "#defaultCheckAll" ).prop( "checked", false );
+            filterOptions.hasOffers = true;
+            showAll = false;
+        } else {
+            // checkbox is not checked -> do something different
+            filterOptions.hasOffers = false;
+        }
+        renderRest();
+    });
+
+    $("#defaultCheck4").click(function(){
+        var id = parseInt($(this).val(), 10);
+        if($(this).is(":checked")) {
+            $( "#defaultCheckAll" ).prop( "checked", false );
+            filterOptions.above5Stars = true;
+            showAll = false;
+        } else {
+            // checkbox is not checked -> do something different
+            filterOptions.above5Stars = false;
+        }
+        renderRest();
+    });
+
+    $("#defaultCheckAll").click(function(){
+        var id = parseInt($(this).val(), 10);
+        if($(this).is(":checked")) {
+            $( "#defaultCheck1" ).prop( "checked", false );
+            $( "#defaultCheck2" ).prop( "checked", false );
+            $( "#defaultCheck3" ).prop( "checked", false );
+            $( "#defaultCheck4" ).prop( "checked", false );
+            showAll = true;
+        } else {
+            // checkbox is not checked -> do something different
+        }
+        renderRest();
     });
   
 });
