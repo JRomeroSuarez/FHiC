@@ -13,6 +13,7 @@
   <link rel="icon" href="img/logo.ico">
 
   <title>Pagament</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -25,6 +26,11 @@
   <!-- Custom styles for this template -->
   <link href="form-validation.css" rel="stylesheet">
 
+  <!--================ Barra superior =================-->
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
 
   <script>
     jQuery.noConflict();
@@ -32,6 +38,31 @@
   </script>
 </head>
 
+
+<!--================ Header Menu Area start =================-->
+<header class="header_area">
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container box_1620">
+        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav justify-content-end">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Tu cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<hr class="mb-4">
 
 <body class="bg-light">
 
@@ -143,20 +174,19 @@
           <article class="card">
             <div class="card-body p-5">
               <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
-                    <i class="fa fa-credit-card"></i>Visa</a></li>
+                <li class="nav-item" img = "img/logo.png">
+                  <a class="nav-link active" data-toggle="pill" href="#nav-tab-card" >
+                     <img src="img/visa.png"> </a></li>
                 <li class="nav-item">
                   <a class="nav-link" data-toggle="pill" href="#nav-tab-card">
-                    <i class="fab fa-credit-card"></i> Mastercard</a></li>
+                     <img src="img/mastercard.png"></a></li>
                 <li class="nav-item">
                   <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
-                    <i class="fa fa-paypal"></i> PayPal</a></li>
+                     <img src="img/paypal.png"></a></li>
               </ul>
 
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="nav-tab-card">
-                  <p class="alert alert-success">Algo de texto o error</p>
                   <form role="form">
                     <div class="form-group">
                       <label for="username">Nombre(en la tarjeta)</label>
@@ -198,6 +228,7 @@
                     <button class="subscribe btn btn-primary btn-block" type="submit" formaction="finalizado.html"> Confirmar pedido</button>
                   </form>
                 </div> <!-- tab-pane.// -->
+
                 <div class="tab-pane fade" id="nav-tab-paypal">
                   <p>Paypal, la forma mas facil de pagar online</p>
                   <p>
