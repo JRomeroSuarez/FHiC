@@ -79,9 +79,19 @@ h4, .h4 {
   margin-top: 10px;
 }
 
+.mapIcon {
+  margin-bottom: 75px;
+}
+
 .rest-logo {
-  height: 128 px;
+  height: 128px;
   width: 128px;
+  margin-bottom: 75px;
+}
+
+.counterCarrito {
+  padding: 10px;
+  margin-left: 20px;
 }
 
 .primary-text {

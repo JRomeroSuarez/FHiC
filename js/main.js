@@ -154,7 +154,7 @@ $(function() {
             Object.keys(filterOptions).forEach(propName => {
                 if(!added && (filterOptions[propName] && restInfo[propName] || showAll)){
                     $("#restaurant-list").append(
-                        '<li><div class="row"><div class="container"><a href="./restaurant/1.html"><img src="'+restInfo.imgUrl+'" class="rest-logo" /><div class="media align-items-center food-card col-lg-8" style="display: inline-block;" ><h4>'+restInfo.restName+'</h4><p>blablablalba hrsgdsj srghjsrr rhgrghr grrg rg rgsg s g srgrgrhgsg</p></div></a><a href="https://www.google.com/maps/search/?api=1&query='+restInfo.direction.replace(/ /g,'+').replace(/,/g,'%2C')+'"><img src="./img/map.png"/></a></div></div></li>'
+                        '<li><div class="row"><div class="container"><a href="./restaurant/1.html"><img src="'+restInfo.imgUrl+'" class="rest-logo" /><div class="media align-items-center food-card col-lg-8" style="display: inline-block;" ><h4>'+restInfo.restName+'</h4><p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p></div></a><a href="https://www.google.com/maps/search/?api=1&query='+restInfo.direction.replace(/ /g,'+').replace(/,/g,'%2C')+'"><img src="./img/map.png" class="mapIcon" /></a></div></div></li>'
                     );
                     added = true;
                 }
