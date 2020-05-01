@@ -104,6 +104,7 @@ $(function() {
         {
             "restName": "Ca la Pepi",
             "imgUrl": "./img/restaurant_logo_1.png",
+            "id": 1,
             "free_delivery": true,
             "open_time": 9,
             "hasOffers": true,
@@ -113,6 +114,7 @@ $(function() {
         {
             "restName": "Ca la Pepa",
             "imgUrl": "./img/restaurant_logo_2.png",
+            "id": 2,
             "free_delivery": false,
             "open_time": 9,
             "hasOffers": true,
@@ -121,6 +123,7 @@ $(function() {
         },{
             "restName": "Ca la Pepu",
             "imgUrl": "./img/restaurant_logo_1.png",
+            "id": 3,
             "free_delivery": false,
             "open_time": 9,
             "hasOffers": false,
@@ -129,6 +132,7 @@ $(function() {
         },{
             "restName": "Ca la Pepu",
             "imgUrl": "./img/restaurant_logo_1.png",
+            "id": 4,
             "free_delivery": true,
             "open_time": 9,
             "hasOffers": true,
@@ -137,6 +141,7 @@ $(function() {
         },{
             "restName": "Ca la Pepu",
             "imgUrl": "./img/restaurant_logo_1.png",
+            "id": 5,
             "free_delivery": false,
             "open_time": 9,
             "hasOffers": true,
@@ -154,7 +159,7 @@ $(function() {
             Object.keys(filterOptions).forEach(propName => {
                 if(!added && (filterOptions[propName] && restInfo[propName] || showAll)){
                     $("#restaurant-list").append(
-                        '<li><div class="row"><div class="container"><a href="./restaurant/1.html"><img src="'+restInfo.imgUrl+'" class="rest-logo" /><div class="media align-items-center food-card col-lg-8" style="display: inline-block;" ><h4>'+restInfo.restName+'</h4><p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p></div></a><a href="https://www.google.com/maps/search/?api=1&query='+restInfo.direction.replace(/ /g,'+').replace(/,/g,'%2C')+'"><img src="./img/map.png" class="mapIcon" /></a></div></div></li>'
+                        '<li><div class="row"><div class="container"><a href="./restaurant/'+restInfo.id+'.html"><img src="'+restInfo.imgUrl+'" class="rest-logo" /><div class="media align-items-center food-card col-lg-8" style="display: inline-block;" ><h4>'+restInfo.restName+'</h4><p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p></div></a><a href="https://www.google.com/maps/search/?api=1&query='+restInfo.direction.replace(/ /g,'+').replace(/,/g,'%2C')+'"><img src="./img/map.png" class="mapIcon" /></a></div></div></li>'
                     );
                     added = true;
                 }
@@ -228,6 +233,26 @@ $(function() {
             // checkbox is not checked -> do something different
         }
         renderRest();
+    });
+
+    $("#plus1").click(() => {
+        var currVal = parseInt($("#quant1")[0].innerHTML);
+        
+        if(currVal >= 99){
+            alert("S'ha arribat al màxim d'items que es poden demanar en una sola comanda. Per a més informació, contacti amb el nostre correu.");
+        }else{
+            $("#quant1")[0].innerHTML = (currVal+1).toString();
+        }
+    });
+
+    $("#minus1").click(() => {
+        var currVal = parseInt($("#quant1")[0].innerHTML);
+        
+        if(currVal == 0){
+            alert("No es poden seleccionar menys de 0 items.");
+        }else{
+            $("#quant1")[0].innerHTML = (currVal-1).toString();
+        }
     });
   
 });
