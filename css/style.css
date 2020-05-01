@@ -71,6 +71,29 @@ h4, .h4 {
   }
 }
 
+.potato {
+  font-size: large
+}
+
+.potutu {
+  margin-top: 10px;
+}
+
+.mapIcon {
+  margin-bottom: 75px;
+}
+
+.rest-logo {
+  height: 128px;
+  width: 128px;
+  margin-bottom: 75px;
+}
+
+.counterCarrito {
+  padding: 10px;
+  margin-left: 20px;
+}
+
 .primary-text {
   color: #e22104
 }

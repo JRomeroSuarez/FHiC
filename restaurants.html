@@ -5,22 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Break-eat</title>
+  <title>Break-eat -- Restaurants</title>
   <link rel="icon" href="img/pestaña.png" type="image/png">
 
   <!--================ Barra superior =================-->
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <!--================ Iconos social =================-->
-   <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> 
+  <!-- <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> -->
   <!--================ Botones para mover el carrousel =================-->
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
 </head>
 
 <body>
@@ -39,8 +36,8 @@
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li id="nav-home" class="nav-item active"><a class="nav-link" href="index.html">Inici</a></li>
-              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
+              <li id="nav-home" class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+              <li id="nav-restaurants" class="nav-item active"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
               <li id="nav-profile" class="nav-item"><a class="nav-link" href="about.html">Perfil</a></li>
               <li id="nav-contact" class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
               <li id="nav-carrito" class="nav-item"><a class="nav-link" href="contact.html"><img src="./img/carrito24.png"></a></li>
@@ -52,172 +49,78 @@
   </header>
   <!--================Header Menu Area =================-->
 
-  <!--================Hero Banner Section start =================-->
-  <section class="hero-banner">
-    <div class="hero-wrapper">
-      <div class="hero-left">
-        <h1 class="hero-title">Pide lo que te pida el cuerpo </h1>
-        <div class="d-sm-flex flex-wrap">
-          <a class="button button-hero button-shadow" href="#">Pide ahora</a>
+  <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  -->
+  <!--================ Breakfast type ==================-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <h2></h2>
+      </div>
+      <div class="col-lg-9" >
+        <h2>Restaurants</h2>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin-left: 3.86%; margin-right: 16%;">
+
+  <div class="container">
+    <div class="row">
+      <div 
+        class="col-lg-3"
+        style="
+          border: 2px solid;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          height: fit-content;
+        "
+      >
+        <h3>Filtres</h3>
+        <div class="form-check">
+          <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheckAll" checked>
+          <label class="form-check-label potato" for="defaultCheckAll">
+            Tots
+          </label>
         </div>
-        <ul class="hero-info d-none d-lg-block">
-          <li>
-            <img src="img/banner/fas-service-icon.png" alt="">
-            <h4>Servicio Rapido</h4>
-          </li>
-          <li>
-            <img src="img/banner/fresh-food-icon.png" alt="">
-            <h4>Comida Fresca</h4>
-          </li>
-          <li>
-            <img src="img/banner/support-icon.png" alt="">
-            <h4>Soporte 24h</h4>
-          </li>
+        <div class="form-check">
+          <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label potato" for="defaultCheck1">
+            Entrega gratuïta
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label potato" for="defaultCheck2">
+            Oberts ara
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label potato" for="defaultCheck3">
+            Ofertes especials
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck4">
+          <label class="form-check-label potato" for="defaultCheck4">
+            Més de 5 estrelles
+          </label>
+        </div>
+      </div>
+      <div class="col-lg-9" >
+        <ul id="restaurant-list">
+
         </ul>
       </div>
-      <div class="hero-right">
-        <div class="owl-carousel owl-theme hero-carousel">
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner1.png" alt="">
-          </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner2.png" alt="">
-          </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner3.png" alt="">
-          </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner4.png" alt="">
-          </div>
-        </div>
-      </div>
-      <ul class="social-icons d-none d-lg-block">
-        <li><a href="#"><i class="ti-facebook"></i></a></li>
-        <li><a href="#"><i class="ti-twitter"></i></a></li>
-        <li><a href="#"><i class="ti-instagram"></i></a></li>
-      </ul>
     </div>
-  </section>
-  <!--================Hero Banner Section end =================-->
+  </div>
 
+  <!--================ Breakfast type ==================-->
 
-  <!--================About Section start =================-->
-  <section id="about" class="about section-margin pb-xl-70">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-xl-6 mb-5 mb-md-0 pb-5 pb-md-0">
-          <div class="img-styleBox">
-            <div class="styleBox-border">
-              <img class="styleBox-img1 img-fluid" src="img/home/about-img1.png" alt="">
-            </div>
-            <img class="styleBox-img2 img-fluid" src="img/home/about-img2.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6 pl-md-5 pl-xl-0 offset-xl-1 col-xl-5">
-          <div class="section-intro mb-lg-4">
-            <h4 class="intro-title">Sobre Nosotros</h4>
-            <h2>Lorem ipsum dolor sit amet</h2>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris in leo sollicitudin, condimentum convallis nisl dictum. Donec mauris ipsum, dignissim ac lobortis nec, tincidunt nec est. </p>
-          <a class="button button-shadow mt-2 mt-lg-4" href="#">Mas Sobre Nosotros</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================About Section End =================-->
-
-
-  <!--================Featured Section Start =================-->
-  <section class="section-margin mb-lg-100">
-    <div class="container">
-      <div class="section-intro mb-75px">
-        <h4 class="intro-title">Comida Destacada</h4>
-        <h2>Fresca y a un precio genial</h2>
-      </div>
-
-
-      <div class="owl-carousel owl-theme featured-carousel">
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Pizza Paqui</h3>
-            </a>
-            <p>Pizzita muy riquita</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">15€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured2.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Alitas de pollo</h3>
-            </a>
-            <p>Spicy as hell</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">7€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured3.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Sandwich vegetariano</h3>
-            </a>
-            <p>Para los veggies</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">5€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Pizza Paqui</h3>
-            </a>
-            <p>Pizzita muy riquita</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">15€</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Featured Section End =================-->
   <!--================Food menu section start =================-->
+  <!---
   <section class="section-margin">
     <div class="container">
       <div class="section-intro mb-75px">
@@ -276,16 +179,10 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
       </div>
     </div>
   </section>
+  --->
 
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
