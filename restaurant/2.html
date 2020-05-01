@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="../vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="../vendors/Magnific-Popup/magnific-popup.css">
 
+  <link rel="stylesheet" href="../css/carrito.css">
   <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -37,18 +39,55 @@
             <span class="icon-bar"></span>
           </button>
 
-          
+
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li id="nav-home" class="nav-item active"><a class="nav-link" href="../index.html">Inici</a></li>
-              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="../restaurants.html">Restaurants</a></li>
-              <li id="nav-profile" class="nav-item"><a class="nav-link" href="../about.html">Perfil</a></li>
+              <li id="nav-home" class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li id="nav-restaurants" class="nav-item active"><a class="nav-link" href="../restaurants.html">Restaurants</a></li>
               <li id="nav-contact" class="nav-item"><a class="nav-link" href="../contact.html">Contacto</a></li>
-              <li id="nav-carrito" class="nav-item"><a class="nav-link" href="../contact.html"><img src="../img/carrito24.png"></a></li>
+              <li id="nav-profile" class="nav-item"><a class="nav-link" href="../login.html">Perfil</a></li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown" role="button" > <img src="../img/carrito24.png"> 2 - Items <span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="../img/bacon.png" alt="" width="50%" height="40%"/>
+                              <span class="item-info">
+                                  <span>Bocadillo de Bacon</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                            <img src="../img/cafe_late.png" alt="" width="50%" height="50%"/>
+                              <span class="item-info">
+                                  <span>Cafe con leche</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a class="text-center" href="../payment.html">Hacer pedido</a></li>
+                </ul>
+              </li>
+                </div>
+              </div>
+
             </ul>
-          </div>
-        </div>
+
+
       </nav>
     </div>
   </header>
@@ -73,7 +112,7 @@
 
   <div class="container">
     <div class="row">
-      <div 
+      <div
         class="col-lg-3"
         style="
           border: 2px solid;
@@ -82,40 +121,40 @@
           height: fit-content;
         "
       >
-        <h3>Filtres</h3>
+        <h3>Filtros</h3>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheckAll" checked>
           <label class="form-check-label potato" for="defaultCheckAll">
-            Tots
+            Todo
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck1">
           <label class="form-check-label potato" for="defaultCheck1">
-            Entrepans calents
+            Bocadillos calientes
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck2">
           <label class="form-check-label potato" for="defaultCheck2">
-            Entrepans freds
+            Bocadillos frios
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck3">
           <label class="form-check-label potato" for="defaultCheck3">
-            Begudes calentes
+            Bebidas calientes
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheck4">
           <label class="form-check-label potato" for="defaultCheck4">
-            Begudes fredes
+            Bebidas frias
           </label>
         </div>
       </div>
       <div class="col-lg-9" id="prod-list">
-        
+
       </div>
     </div>
   </div>

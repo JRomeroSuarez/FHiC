@@ -11,11 +11,12 @@
   <!--================ Barra superior =================-->
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <!--================ Iconos social =================-->
-   <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> 
+   <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
   <!--================ Botones para mover el carrousel =================-->
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
+  <link rel="stylesheet" href="css/carrito.css">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -39,11 +40,47 @@
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li id="nav-home" class="nav-item active"><a class="nav-link" href="index.html">Inici</a></li>
-              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
-              <li id="nav-profile" class="nav-item"><a class="nav-link" href="about.html">Perfil</a></li>
+              <li id="nav-home" class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li id="nav-restaurants" class="nav-item "><a class="nav-link" href="restaurants.html">Restaurantes</a></li>
               <li id="nav-contact" class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-              <li id="nav-carrito" class="nav-item"><a class="nav-link" href="contact.html"><img src="./img/carrito24.png"></a></li>
+              <li id="nav-about" class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+              <li id="nav-profile" class="nav-item"><a class="nav-link" href="login.html">Perfil</a></li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown" role="button" > <img src="img/carrito24.png"> 2 - Items <span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="img/bacon.png" alt="" width="50%" height="40%"/>
+                              <span class="item-info">
+                                  <span>Bocadillo de Bacon</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                            <img src="img/cafe_late.png" alt="" width="50%" height="50%"/>
+                              <span class="item-info">
+                                  <span>Cafe con leche</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a class="text-center" href="payment.html">Hacer pedido</a></li>
+                </ul>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -52,13 +89,14 @@
   </header>
   <!--================Header Menu Area =================-->
 
+
   <!--================Hero Banner Section start =================-->
   <section class="hero-banner">
     <div class="hero-wrapper">
       <div class="hero-left">
         <h1 class="hero-title">Pide lo que te pida el cuerpo </h1>
         <div class="d-sm-flex flex-wrap">
-          <a class="button button-hero button-shadow" href="#">Pide ahora</a>
+          <a class="button button-hero button-shadow" href="restaurants.html">Pide ahora</a>
         </div>
         <ul class="hero-info d-none d-lg-block">
           <li>
@@ -119,7 +157,7 @@
             <h2>Lorem ipsum dolor sit amet</h2>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris in leo sollicitudin, condimentum convallis nisl dictum. Donec mauris ipsum, dignissim ac lobortis nec, tincidunt nec est. </p>
-          <a class="button button-shadow mt-2 mt-lg-4" href="#">Mas Sobre Nosotros</a>
+          <a class="button button-shadow mt-2 mt-lg-4" href="about.html">Mas Sobre Nosotros</a>
         </div>
       </div>
     </div>
