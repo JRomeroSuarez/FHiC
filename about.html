@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
+  <link rel="stylesheet" href="css/carrito.css">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -33,9 +34,47 @@
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-              <li class="nav-item active"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+              <li id="nav-home" class="nav-item "><a class="nav-link" href="index.html">Inicio</a></li>
+              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="restaurants.html">Restaurantes</a></li>
+              <li id="nav-contact" class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+              <li id="nav-about" class="nav-item active"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+              <li id="nav-profile" class="nav-item"><a class="nav-link" href="login.html">Perfil</a></li>
+
+
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown" role="button" > <img src="img/carrito24.png"> 2 - Items <span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <span class="item-info">
+                                  <span>Bocadillo de Bacon</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <span class="item-info">
+                                  <span>Cafe con leche</span>
+                                  <span>20 €</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li class="divider"></li>
+                    <a class="button" href="payment.html" style="padding-left: 50px;margin-left: 25px;">Hacer pedido</a>
+                </ul>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -66,11 +105,7 @@
         </ul>
       </div>
       <div class="hero-right">
-        <div class="owl-carousel owl-theme w-100 hero-carousel">
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner-sm.png" alt="">
-          </div>
-        </div>
+            <img class="img-fluid" src="img/repartidor.png" alt="">
       </div>
       <ul class="social-icons d-none d-lg-block">
         <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -88,9 +123,8 @@
         <div class="col-md-6 col-xl-6 mb-5 mb-md-0 pb-5 pb-md-0">
           <div class="img-styleBox">
             <div class="styleBox-border">
-              <img class="styleBox-img1 img-fluid" src="img/home/about-img1.png" alt="">
+              <img class="styleBox-img1 img-fluid" src="img/home/chef-1.png" alt="">
             </div>
-            <img class="styleBox-img2 img-fluid" src="img/home/about-img2.png" alt="">
           </div>
         </div>
         <div class="col-md-6 pl-md-5 pl-xl-0 offset-xl-1 col-xl-5">
@@ -99,7 +133,6 @@
             <h2>Lorem ipsum dolor sit amet</h2>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris in leo sollicitudin, condimentum convallis nisl dictum. Donec mauris ipsum, dignissim ac lobortis nec, tincidunt nec est. </p>
-          <a class="button button-shadow mt-2 mt-lg-4" href="#">Mas Sobre Nosotros</a>
         </div>
       </div>
     </div>
@@ -107,107 +140,8 @@
   <!--================About Section End =================-->
 
 
-  <!--================Featured Section Start =================-->
-  <section class="section-margin mb-lg-100">
-    <div class="container">
-      <div class="section-intro mb-75px">
-        <h4 class="intro-title">Featured Food</h4>
-        <h2>Fresh taste and great price</h2>
-      </div>
 
 
-      <div class="owl-carousel owl-theme featured-carousel">
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Mountain Mike Pizza</h3>
-            </a>
-            <p>Whales and darkness moving</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">$35</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured2.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Patatas Bravas</h3>
-            </a>
-            <p>Whales and darkness moving</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">$30</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured3.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Pulled Sandwich</h3>
-            </a>
-            <p>Whales and darkness moving</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">$20</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Mountain Mike Pizza</h3>
-            </a>
-            <p>Whales and darkness moving</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">$35</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Featured Section End =================-->
-
-
-  <!--================CTA section start =================-->
-  <section class="cta-area text-center">
-    <div class="container">
-      <p>Some Trendy And Popular Courses Offerd</p>
-      <h2>Under replenish give saying thing</h2>
-      <a class="button" href="#">Reservation</a>
-    </div>
-  </section>
-  <!--================CTA section end =================-->
 
 
   <!-- ================ start footer Area ================= -->
@@ -258,7 +192,7 @@
           <div class="form-wrap" id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
               <div class="input-group">
-                <input type="email" class="form-control" name="EMAIL" placeholder="Tu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+                <input type="email" class="form-control" name="EMAIL" placeholder="Tu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tu direccion de correo'">
                 <div class="input-group-append">
                   <button class="btn click-btn" type="submit">
                     <i class="ti-arrow-right"></i>

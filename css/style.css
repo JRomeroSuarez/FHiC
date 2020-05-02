@@ -71,6 +71,29 @@ h4, .h4 {
   }
 }
 
+.potato {
+  font-size: large
+}
+
+.potutu {
+  margin-top: 10px;
+}
+
+.mapIcon {
+  margin-bottom: 75px;
+}
+
+.rest-logo {
+  height: 128px;
+  width: 128px;
+  margin-bottom: 75px;
+}
+
+.counterCarrito {
+  padding: 10px;
+  margin-left: 20px;
+}
+
 .primary-text {
   color: #e22104
 }
@@ -187,10 +210,11 @@ h4, .h4 {
   font-family: "Open Sans", sans-serif;
   color: #2f2d4e;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
+  font-weight: bold;
   padding: 33px 0;
-  display: inline-block
+  display: inline-block;
 }
 
 .header_area .navbar .nav .nav-item .nav-link:after {
