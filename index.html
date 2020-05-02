@@ -1,255 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Break-eat</title>
-  <link rel="icon" href="img/pestaña.png" type="image/png">
-  <!--================ Barra superior =================-->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <!--================ Iconos social =================-->
-  <!-- <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> -->
-  <!--================ Botones para mover el carrousel =================-->
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <!--================ Header Menu Area start =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Break-eat</title>
+    <link rel="icon" href="img/pestaña.png" type="image/png">
+    <!--================ Barra superior =================-->
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <!--================ Iconos social =================-->
+    <!-- <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> -->
+    <!--================ Botones para mover el carrousel =================-->
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--================ Header Menu Area start =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-end">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+    <!--================Hero Banner Section start =================-->
+    <section class="hero-banner">
+      <div class="hero-wrapper">
+        <!-- Fer reserva -->
+        <div class="hero-left">
+          <h1 class="hero-title">Haz tu primer pedido del dia<h1>
+            <!-- Boto de fer una comanda -->
+          <div class="d-sm-flex flex-wrap">
+            <a class="button button-hero button-shadow" href="#">Pide ahora</a>
+          </div>
+          <p class="reserve-text">Introduze la fecha y hora para que el repartidor 
+            llegue en el momento deseado con tu desayuno</p>
+          <!-- w-50 = 50% d'amplada de l'input de la data -->
+          <div class="w-50 form-group">
+            <p class="reserve-text">Fecha</p>
+            <input class="form-control" type="date" value="2011-08-19" 
+                    id="date-input">
+            <p class="reserve-text">Hora</p>
+            <input class="form-control" type="time" value="13:45:00" 
+                    id="example-time-input">
+          </div>
+          <!-- Boto de fer una reserva -->
+          <div class="d-sm-flex flex-wrap">
+            <a class="button button-hero-reserve button-shadow" href="#">Haz tu reserva</a>
+          </div>
+        </div>
+        <!-- Fotos orferte dia -->
+        <div class="hero-right">
+          <h4 class="day-offers-title">OFERTAS DEL DIA</h4>
+          <div class="owl-carousel owl-theme hero-carousel">
+            <div class="hero-carousel-item">
+              <img class="img-fluid" src="img/index/desayuno1.jpg" alt="">
+            </div>
+            <div class="hero-carousel-item">
+              <img class="img-fluid" src="img/index/desayuno2.png" alt="">
+            </div>
+            <div class="hero-carousel-item">
+              <img class="img-fluid" src="img/index/desayuno3.jpg" alt="">
+            </div>
+            <div class="hero-carousel-item">
+              <img class="img-fluid" src="img/banner/hero-banner4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Hero Banner Section end =================-->
+    <!--================Featured Section Start =================-->
+    <section class="section-margin mb-lg-100">
+      <div class="container">
+        <div class="section-intro mb-75px">
+          <h4 class="intro-title"><b>Ofertas</b></h4>
+          <h2>Desayunos a buen precio</h2>
+        </div>
+        <div class="owl-carousel owl-theme featured-carousel">
+          <div class="featured-item">
+            <img class="card-img rounded-0" src="img/index/desayuno4.jpg" alt="">
+            <div class="item-body">
+              <a href="#">
+                <h3>Pizza Paqui</h3>
+              </a>
+              <p>Pizzita muy riquita</p>
+              <div class="d-flex justify-content-between">
+                <ul class="rating-star">
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                </ul>
+                <h3 class="price-tag">15€</h3>
+              </div>
+            </div>
+          </div>
+          <div class="featured-item">
+            <img class="card-img rounded-0" src="img/index/desayuno5.jpg" alt="">
+            <div class="item-body">
+              <a href="#">
+                <h3>Alitas de pollo</h3>
+              </a>
+              <p>Spicy as hell</p>
+              <div class="d-flex justify-content-between">
+                <ul class="rating-star">
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                </ul>
+                <h3 class="price-tag">7€</h3>
+              </div>
+            </div>
+          </div>
+          <div class="featured-item">
+            <img class="card-img rounded-0" src="img/index/desayuno6.jpg" alt="">
+            <div class="item-body">
+              <a href="#">
+                <h3>Sandwich vegetariano</h3>
+              </a>
+              <p>Para los veggies</p>
+              <div class="d-flex justify-content-between">
+                <ul class="rating-star">
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                </ul>
+                <h3 class="price-tag">5€</h3>
+              </div>
+            </div>
+          </div>
+          <div class="featured-item">
+            <img class="card-img rounded-0" src="img/index/desayuno7.jpg" alt="">
+            <div class="item-body">
+              <a href="#">
+                <h3>Pizza Paqui</h3>
+              </a>
+              <p>Pizzita muy riquita</p>
+              <div class="d-flex justify-content-between">
+                <ul class="rating-star">
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                  <li><i class="ti-star"></i></li>
+                </ul>
+                <h3 class="price-tag">15€</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Featured Section End =================-->
+    <!-- ================ start footer Area ================= -->
+    <footer class="footer-area section-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+            <h4>Ciudades</h4>
+            <ul>
+              <li><a href="#">Barcelona</a></li>
+              <li><a href="#">Girona</a></li>
+              <li><a href="#">Tarragona</a></li>
+              <li><a href="#">Lleida</a></li>
             </ul>
           </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!--================Header Menu Area =================-->
-  <!--================Hero Banner Section start =================-->
-  <section class="hero-banner">
-    <div class="hero-wrapper">
-      <div class="hero-left">
-        <h1 class="hero-title">Haz tu primer pedido del dia<h1>
-          <!-- Boto de fer una comanda -->
-        <div class="d-sm-flex flex-wrap">
-          <a class="button button-hero button-shadow" href="#">Pide ahora</a>
-        </div>
-        <p class="reserve-text">Introduze la fecha y hora para que el repartidor 
-          llegue en el momento deseado con tu desayuno</p>
-        <!-- w-50 = 50% d'amplada de l'input de la data -->
-        <div class="w-50 form-group">
-          <p class="reserve-text">Fecha</p>
-          <input class="form-control" type="date" value="2011-08-19" 
-                  id="date-input">
-          <p class="reserve-text">Hora</p>
-          <input class="form-control" type="time" value="13:45:00" 
-                  id="example-time-input">
-        </div>
-        <!-- Boto de fer una reserva -->
-        <div class="d-sm-flex flex-wrap">
-          <a class="button button-hero-reserve button-shadow" href="#">Haz tu reserva</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="owl-carousel owl-theme hero-carousel">
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner1.png" alt="">
+          <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+            <h4>Tipos de desayuno</h4>
+            <ul>
+              <li><a href="#">Vegano</a></li>
+              <li><a href="#">Caliente</a></li>
+              <li><a href="#">Frío</a></li>
+              <li><a href="#">Goloso</a></li>
+            </ul>
           </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner2.png" alt="">
+          <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+            <h4>Mas buscados</h4>
+            <ul>
+              <li><a href="#">Croissant con café con leche</a></li>
+              <li><a href="#">Bocadillos</a></li>
+              <li><a href="#">Combinaciones</a></li>
+              <li><a href="#">Nuestros especiales</a></li>
+            </ul>
           </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner3.png" alt="">
+          <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+            <h4>Sobre nosotros</h4>
+            <ul>
+              <li><a href="#">Quienes somos</a></li>
+              <li><a href="#">Ayuda</a></li>
+              <li><a href="#">Garantia de precio</a></li>
+              <li><a href="#">Politica de privacidad i cookies</a></li>
+            </ul>
           </div>
-          <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner4.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Hero Banner Section end =================-->
-  <!--================Featured Section Start =================-->
-  <section class="section-margin mb-lg-100">
-    <div class="container">
-      <div class="section-intro mb-75px">
-        <h4 class="intro-title">Ofertas</h4>
-        <h2>Desayunos a buen precio</h2>
-      </div>
-      <div class="owl-carousel owl-theme featured-carousel">
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Pizza Paqui</h3>
-            </a>
-            <p>Pizzita muy riquita</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">15€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured2.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Alitas de pollo</h3>
-            </a>
-            <p>Spicy as hell</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">7€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured3.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Sandwich vegetariano</h3>
-            </a>
-            <p>Para los veggies</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">5€</h3>
-            </div>
-          </div>
-        </div>
-        <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
-          <div class="item-body">
-            <a href="#">
-              <h3>Pizza Paqui</h3>
-            </a>
-            <p>Pizzita muy riquita</p>
-            <div class="d-flex justify-content-between">
-              <ul class="rating-star">
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-                <li><i class="ti-star"></i></li>
-              </ul>
-              <h3 class="price-tag">15€</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Featured Section End =================-->
-  <!-- ================ start footer Area ================= -->
-  <footer class="footer-area section-gap">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Ciudades</h4>
-          <ul>
-            <li><a href="#">Barcelona</a></li>
-            <li><a href="#">Las Palmgas</a></li>
-            <li><a href="#">Madrid</a></li>
-            <li><a href="#">Valencia</a></li>
-            <li><a href="#">Más ciudades</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Tipos de comida</h4>
-          <ul>
-            <li><a href="#">Pizza a domicilio</a></li>
-            <li><a href="#">Hamburgesas a domicilio</a></li>
-            <li><a href="#">Desayunos a domicilio</a></li>
-            <li><a href="#">Mas tipos de comida</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Mas buscados</h4>
-          <ul>
-            <li><a href="#">Burger King</a></li>
-            <li><a href="#">KFC</a></li>
-            <li><a href="#">365 cafe</a></li>
-            <li><a href="#">Telepizza</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Sobre nosotros</h4>
-          <ul>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Ayuda</a></li>
-            <li><a href="#">Garantia de precio</a></li>
-            <li><a href="#">Politica de privacidad i cookies</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Newsletter</h4>
-          <p>Puedes confiar en nosotros. solo enviamos ofertas promocionales,</p>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
-              <div class="input-group">
-                <input type="email" class="form-control" name="EMAIL" placeholder="Tu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
-                <div class="input-group-append">
-                  <button class="btn click-btn" type="submit">
-                    <i class="ti-arrow-right"></i>
-                  </button>
+          <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
+            <h4>Newsletter</h4>
+            <p>Puedes confiar en nosotros. solo enviamos ofertas promocionales,</p>
+            <div class="form-wrap" id="mc_embed_signup">
+              <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+                <div class="input-group">
+                  <input type="email" class="form-control" name="EMAIL" placeholder="Tu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+                  <div class="input-group-append">
+                    <button class="btn click-btn" type="submit">
+                      <i class="ti-arrow-right"></i>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-
-              <div class="info"></div>
-            </form>
+                <div style="position: absolute; left: -5000px;">
+                  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                </div>
+                <div class="info"></div>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
-    </div>
-    </div>
-  </footer>
-  <!-- ================ End footer Area ================= -->
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+      </div>
+    </footer>
+    <!-- ================ End footer Area ================= -->
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

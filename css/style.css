@@ -1082,6 +1082,26 @@ h4, .h4 {
   margin-bottom: 15px
 }
 
+.day-offers-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #e22104;
+  padding-right: 115px;
+  position: relative;
+}
+
+.day-offers-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  min-width: 100px;
+  background-color: #3a414e;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%)
+}
+
 .section-intro .intro-title::after {
   content: "";
   display: block;
