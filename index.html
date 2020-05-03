@@ -5,26 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Break-eat</title>
+  <title>Break-Eat</title>
   <link rel="icon" href="img/pestaña.png" type="image/png">
-
   <!--================ Barra superior =================-->
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <!--================ Iconos social =================-->
-   <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> 
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
   <!--================ Botones para mover el carrousel =================-->
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
-
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link rel="stylesheet" href="css/carrito.css">
 
 </head>
 
 <body>
-
   <!--================ Header Menu Area start =================-->
   <header class="header_area">
     <div class="main_menu">
@@ -36,14 +32,47 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li id="nav-home" class="nav-item active"><a class="nav-link" href="index.html">Inici</a></li>
-              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
-              <li id="nav-profile" class="nav-item"><a class="nav-link" href="about.html">Perfil</a></li>
-              <li id="nav-contact" class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-              <li id="nav-carrito" class="nav-item"><a class="nav-link" href="contact.html"><img src="./img/carrito24.png"></a></li>
+              <li id="nav-home" class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li id="nav-restaurants" class="nav-item"><a class="nav-link" href="restaurants.html">Restaurantes</a></li>
+              <li id="nav-contact" class="nav-item "><a class="nav-link" href="contact.html">Contacto</a></li>
+              <li id="nav-about" class="nav-item "><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+              <li id="nav-profile" class="nav-item"><a class="nav-link" href="login.html">Perfil</a></li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown" role="button"> <img src="img/carrito24.png"> 2 - Items <span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                  <li>
+                    <span class="item">
+                      <span class="item-left">
+                        <span class="item-info">
+                          <span>Bocadillo de Bacon</span>
+                          <span>20 €</span>
+                        </span>
+                      </span>
+                      <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="item">
+                      <span class="item-left">
+                        <span class="item-info">
+                          <span>Cafe con leche</span>
+                          <span>20 €</span>
+                        </span>
+                      </span>
+                      <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                      </span>
+                    </span>
+                  </li>
+                  <hr>
+                  <li class="divider"></li>
+                  <a class="button" href="payment.html" style="margin-left: 25px; font-size:16px;margin-right: 30px;padding-left: 25px;padding-right: 25px;">Confirmar pedido</a>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -51,40 +80,42 @@
     </div>
   </header>
   <!--================Header Menu Area =================-->
-
   <!--================Hero Banner Section start =================-->
   <section class="hero-banner">
     <div class="hero-wrapper">
+      <!-- Fer reserva -->
       <div class="hero-left">
-        <h1 class="hero-title">Pide lo que te pida el cuerpo </h1>
-        <div class="d-sm-flex flex-wrap">
-          <a class="button button-hero button-shadow" href="#">Pide ahora</a>
-        </div>
-        <ul class="hero-info d-none d-lg-block">
-          <li>
-            <img src="img/banner/fas-service-icon.png" alt="">
-            <h4>Servicio Rapido</h4>
-          </li>
-          <li>
-            <img src="img/banner/fresh-food-icon.png" alt="">
-            <h4>Comida Fresca</h4>
-          </li>
-          <li>
-            <img src="img/banner/support-icon.png" alt="">
-            <h4>Soporte 24h</h4>
-          </li>
-        </ul>
+        <h1 class="hero-title">Haz tu primer pedido del dia<h1>
+            <!-- Boto de fer una comanda -->
+            <div class="d-sm-flex flex-wrap">
+              <a class="button button-hero button-shadow" href="restaurants.html">Pide ahora</a>
+            </div>
+            <p class="reserve-text">Introduze la fecha y hora para que el repartidor
+              llegue en el momento deseado con tu desayuno</p>
+            <!-- w-50 = 50% d'amplada de l'input de la data -->
+            <div class="w-50 form-group">
+              <p class="reserve-text">Fecha</p>
+              <input class="form-control" type="date" value="2020-05-02" id="date-input">
+              <p class="reserve-text">Hora</p>
+              <input class="form-control" type="time" value="10:45:00" id="example-time-input">
+            </div>
+            <!-- Boto de fer una reserva -->
+            <div class="d-sm-flex flex-wrap">
+              <a class="button button-hero-reserve button-shadow" href="restaurants.html">Haz tu reserva</a>
+            </div>
       </div>
+      <!-- Fotos orferte dia -->
       <div class="hero-right">
+        <h4 class="day-offers-title">OFERTAS DEL DIA</h4>
         <div class="owl-carousel owl-theme hero-carousel">
           <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner1.png" alt="">
+            <img class="img-fluid" src="img/index/desayuno1.jpg" alt="">
           </div>
           <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner2.png" alt="">
+            <img class="img-fluid" src="img/index/desayuno2.png" alt="">
           </div>
           <div class="hero-carousel-item">
-            <img class="img-fluid" src="img/banner/hero-banner3.png" alt="">
+            <img class="img-fluid" src="img/index/desayuno3.jpg" alt="">
           </div>
           <div class="hero-carousel-item">
             <img class="img-fluid" src="img/banner/hero-banner4.png" alt="">
@@ -97,48 +128,19 @@
         <li><a href="#"><i class="ti-instagram"></i></a></li>
       </ul>
     </div>
-  </section>
-  <!--================Hero Banner Section end =================-->
-
-
-  <!--================About Section start =================-->
-  <section id="about" class="about section-margin pb-xl-70">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-xl-6 mb-5 mb-md-0 pb-5 pb-md-0">
-          <div class="img-styleBox">
-            <div class="styleBox-border">
-              <img class="styleBox-img1 img-fluid" src="img/home/about-img1.png" alt="">
-            </div>
-            <img class="styleBox-img2 img-fluid" src="img/home/about-img2.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6 pl-md-5 pl-xl-0 offset-xl-1 col-xl-5">
-          <div class="section-intro mb-lg-4">
-            <h4 class="intro-title">Sobre Nosotros</h4>
-            <h2>Lorem ipsum dolor sit amet</h2>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris in leo sollicitudin, condimentum convallis nisl dictum. Donec mauris ipsum, dignissim ac lobortis nec, tincidunt nec est. </p>
-          <a class="button button-shadow mt-2 mt-lg-4" href="#">Mas Sobre Nosotros</a>
-        </div>
-      </div>
     </div>
   </section>
-  <!--================About Section End =================-->
-
-
+  <!--================Hero Banner Section end =================-->
   <!--================Featured Section Start =================-->
   <section class="section-margin mb-lg-100">
     <div class="container">
       <div class="section-intro mb-75px">
-        <h4 class="intro-title">Comida Destacada</h4>
-        <h2>Fresca y a un precio genial</h2>
+        <h4 class="intro-title"><b>Ofertas</b></h4>
+        <h2>Desayunos a buen precio</h2>
       </div>
-
-
       <div class="owl-carousel owl-theme featured-carousel">
         <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
+          <img class="card-img rounded-0" src="img/index/desayuno4.jpg" alt="">
           <div class="item-body">
             <a href="#">
               <h3>Pizza Paqui</h3>
@@ -157,7 +159,7 @@
           </div>
         </div>
         <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured2.png" alt="">
+          <img class="card-img rounded-0" src="img/index/desayuno5.jpg" alt="">
           <div class="item-body">
             <a href="#">
               <h3>Alitas de pollo</h3>
@@ -176,7 +178,7 @@
           </div>
         </div>
         <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured3.png" alt="">
+          <img class="card-img rounded-0" src="img/index/desayuno6.jpg" alt="">
           <div class="item-body">
             <a href="#">
               <h3>Sandwich vegetariano</h3>
@@ -195,7 +197,7 @@
           </div>
         </div>
         <div class="featured-item">
-          <img class="card-img rounded-0" src="img/home/featured1.png" alt="">
+          <img class="card-img rounded-0" src="img/index/desayuno7.jpg" alt="">
           <div class="item-body">
             <a href="#">
               <h3>Pizza Paqui</h3>
@@ -217,76 +219,6 @@
     </div>
   </section>
   <!--================Featured Section End =================-->
-  <!--================Food menu section start =================-->
-  <section class="section-margin">
-    <div class="container">
-      <div class="section-intro mb-75px">
-        <h4 class="intro-title">Food Menu</h4>
-        <h2>Delicious food</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="media align-items-center food-card">
-            <img class="mr-3 mr-sm-4" src="img/home/food1.png" alt="">
-            <div class="media-body">
-              <div class="d-flex justify-content-between food-card-title">
-                <h4>Roasted Marrow</h4>
-                <h3 class="price-tag">$32</h3>
-              </div>
-              <p>Whales and darkness moving form cattle</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="media align-items-center food-card">
-            <img class="mr-3 mr-sm-4" src="img/home/food1.png" alt="">
-            <div class="media-body">
-              <div class="d-flex justify-content-between food-card-title">
-                <h4>Roasted Marrow</h4>
-                <h3 class="price-tag">$32</h3>
-              </div>
-              <p>Whales and darkness moving form cattle</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="media align-items-center food-card">
-            <img class="mr-3 mr-sm-4" src="img/home/food1.png" alt="">
-            <div class="media-body">
-              <div class="d-flex justify-content-between food-card-title">
-                <h4>Roasted Marrow</h4>
-                <h3 class="price-tag">$32</h3>
-              </div>
-              <p>Whales and darkness moving form cattle</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="media align-items-center food-card">
-            <img class="mr-3 mr-sm-4" src="img/home/food1.png" alt="">
-            <div class="media-body">
-              <div class="d-flex justify-content-between food-card-title">
-                <h4>Roasted Marrow</h4>
-                <h3 class="price-tag">$32</h3>
-              </div>
-              <p>Whales and darkness moving form cattle</p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-      </div>
-    </div>
-  </section>
-
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
     <div class="container">
@@ -294,44 +226,42 @@
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Ciudades</h4>
           <ul>
-            <li><a href="#">Barcelona</a></li>
-            <li><a href="#">Las Palmgas</a></li>
-            <li><a href="#">Madrid</a></li>
-            <li><a href="#">Valencia</a></li>
-            <li><a href="#">Más ciudades</a></li>
+            <li><a href="restaurants.html">Barcelona</a></li>
+            <li><a href="restaurants.html">Girona</a></li>
+            <li><a href="restaurants.html">Tarragona</a></li>
+            <li><a href="restaurants.html">Lleida</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Tipos de comida</h4>
+          <h4>Tipos de desayuno</h4>
           <ul>
-            <li><a href="#">Pizza a domicilio</a></li>
-            <li><a href="#">Hamburgesas a domicilio</a></li>
-            <li><a href="#">Desayunos a domicilio</a></li>
-            <li><a href="#">Mas tipos de comida</a></li>
+            <li><a href="restaurants.html">Vegano</a></li>
+            <li><a href="restaurants.html">Caliente</a></li>
+            <li><a href="restaurants.html">Frío</a></li>
+            <li><a href="restaurants.html">Goloso</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Mas buscados</h4>
           <ul>
-            <li><a href="#">Burger King</a></li>
-            <li><a href="#">KFC</a></li>
-            <li><a href="#">365 cafe</a></li>
-            <li><a href="#">Telepizza</a></li>
+            <li><a href="restaurants.html">Croissant con café con leche</a></li>
+            <li><a href="restaurants.html">Bocadillos</a></li>
+            <li><a href="restaurants.html">Combinaciones</a></li>
+            <li><a href="restaurants.html">Nuestros especiales</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Sobre nosotros</h4>
           <ul>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Ayuda</a></li>
-            <li><a href="#">Garantia de precio</a></li>
-            <li><a href="#">Politica de privacidad i cookies</a></li>
+            <li><a href="about.html">Quienes somos</a></li>
+            <li><a href="about.html">Ayuda</a></li>
+            <li><a href="about.html">Garantia de precio</a></li>
+            <li><a href="about.html">Politica de privacidad i cookies</a></li>
           </ul>
         </div>
         <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
           <h4>Newsletter</h4>
           <p>Puedes confiar en nosotros. solo enviamos ofertas promocionales,</p>
-
           <div class="form-wrap" id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
               <div class="input-group">
@@ -345,18 +275,15 @@
               <div style="position: absolute; left: -5000px;">
                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
               </div>
-
               <div class="info"></div>
             </form>
           </div>
-
         </div>
       </div>
     </div>
     </div>
   </footer>
   <!-- ================ End footer Area ================= -->
-
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>

@@ -11,16 +11,16 @@ var showAll = true;
 $(function() {
   "use strict";
 
-  var nav_offset_top = $('header').height() + 50; 
+  var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
 	-------------------------------------------------------------------------------*/
 
-	//* Navbar Fixed  
+	//* Navbar Fixed
     function navbarFixed(){
-        if ( $('.header_area').length ){ 
+        if ( $('.header_area').length ){
             $(window).scroll(function() {
-                var scroll = $(window).scrollTop();   
+                var scroll = $(window).scrollTop();
                 if (scroll >= nav_offset_top ) {
                     $(".header_area").addClass("navbar_fixed");
                 } else {
@@ -35,7 +35,7 @@ $(function() {
 
 
 
-  //------- mailchimp --------//  
+  //------- mailchimp --------//
 	function mailChimp() {
 		$('#mc_embed_signup').find('form').ajaxChimp();
 	}
@@ -166,7 +166,7 @@ $(function() {
             });
         });
     }
-    
+
     renderRest();
 
     $("#defaultCheck1").click(function(){
@@ -237,7 +237,7 @@ $(function() {
 
     $("#plus1").click(() => {
         var currVal = parseInt($("#quant1")[0].innerHTML);
-        
+
         if(currVal >= 99){
             alert("S'ha arribat al màxim d'items que es poden demanar en una sola comanda. Per a més informació, contacti amb el nostre correu.");
         }else{
@@ -247,14 +247,12 @@ $(function() {
 
     $("#minus1").click(() => {
         var currVal = parseInt($("#quant1")[0].innerHTML);
-        
+
         if(currVal == 0){
             alert("No es poden seleccionar menys de 0 items.");
         }else{
             $("#quant1")[0].innerHTML = (currVal-1).toString();
         }
     });
-  
+
 });
-
-

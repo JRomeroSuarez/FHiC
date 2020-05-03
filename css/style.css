@@ -23,6 +23,36 @@ button {
   cursor: pointer
 }
 
+.button-hero-reserve {
+  margin-top: 5px;
+}
+
+.reserve-text {
+  font-size: 20px;
+  padding-right: 10px;
+  margin-top: 15px;
+}
+
+.day-offers-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #e22104;
+  padding-right: 115px;
+  position: relative;
+}
+
+.day-offers-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  min-width: 100px;
+  background-color: #3a414e;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%)
+}
+
 button:focus {
   outline: 0 !important;
   box-shadow: none !important
@@ -2756,7 +2786,8 @@ h4, .h4 {
 }
 
 .button-hero {
-  align-self: center
+  align-self: center;
+  margin-bottom: 60px
 }
 
 @media (max-width: 845px) {
