@@ -2956,3 +2956,13 @@ button.button {
 .footer-area .footer-bottom .footer-social a i, .footer-area .footer-bottom .footer-social a span {
   font-size: 14px
 }
+
+.user-msg {
+  text-align: right;
+  color: black;
+}
+
+.bot-msg {
+  text-align: left;
+  color: blue;
+}
