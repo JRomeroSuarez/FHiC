@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Break-Eat -- Restaurantes</title>
+  <title>Break-eat -- Restaurants</title>
   <link rel="icon" href="img/pestaña.png" type="image/png">
 
   <!--================ Barra superior =================-->
@@ -34,13 +34,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li id="nav-home" class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
               <li id="nav-restaurants" class="nav-item active"><a class="nav-link" href="restaurants.html">Restaurantes</a></li>
-              <li id="nav-contact" class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-              <li id="nav-about" class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+              <li id="nav-contact" class="nav-item "><a class="nav-link" href="contact.html">Contacto</a></li>
+              <li id="nav-about" class="nav-item "><a class="nav-link" href="about.html">Sobre nosotros</a></li>
               <li id="nav-profile" class="nav-item"><a class="nav-link" href="login.html">Perfil</a></li>
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link" data-toggle="dropdown" role="button"> <img src="img/carrito24.png"> 2 - Items <span class="caret"></span></a>
@@ -71,9 +70,9 @@
                       </span>
                     </span>
                   </li>
-                  <li class="divider"></li>
                   <hr>
-                  <a class="button" href="payment.html" style="margin-left: 25px; font-size:16px;margin-right: 25px;padding-left: 30px;padding-right: 25px;">Confirmar pedido</a>
+                  <li class="divider"></li>
+                  <a class="button" href="payment.html" style="margin-left: 25px; font-size:16px;margin-right: 30px;padding-left: 25px;padding-right: 25px;">Confirmar pedido</a>
                 </ul>
               </li>
             </ul>
@@ -93,8 +92,8 @@
       <div class="col-lg-3">
         <h2></h2>
       </div>
-      <div class="col-lg-9">
-        <h2>Restaurantes</h2>
+      <div class="col-lg-9" >
+        <h2>Restaurants</h2>
       </div>
     </div>
   </div>
@@ -103,12 +102,15 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-3" style="
+      <div 
+        class="col-lg-3"
+        style="
           border: 2px solid;
           padding-top: 10px;
           padding-bottom: 15px;
           height: fit-content;
-        ">
+        "
+      >
         <h3>Filtres</h3>
         <div class="form-check">
           <input class="form-check-input potutu" type="checkbox" value="" id="defaultCheckAll" checked>
@@ -141,7 +143,7 @@
           </label>
         </div>
       </div>
-      <div class="col-lg-9">
+      <div class="col-lg-9" >
         <ul id="restaurant-list">
 
         </ul>
@@ -150,6 +152,12 @@
   </div>
 
   <!--================ Breakfast type ==================-->
+  <div style="right: 0px; border: 0px none; height: 450px; position: fixed; width: 300px; overflow: hidden; bottom: 0px;">
+    <div style="overflow: hidden;">
+    </div>
+    <iframe src="./chatbot.html" scrolling="no" style="height: 450px; border: 0px none; width: 300px; margin-bottom: 0px;">
+    </iframe>
+  </div>
 
   <!--================Food menu section start =================-->
   <!---
@@ -215,6 +223,7 @@
     </div>
   </section>
   --->
+
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
     <div class="container">
@@ -222,42 +231,44 @@
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Ciudades</h4>
           <ul>
-            <li><a href="restaurants.html">Barcelona</a></li>
-            <li><a href="restaurants.html">Girona</a></li>
-            <li><a href="restaurants.html">Tarragona</a></li>
-            <li><a href="restaurants.html">Lleida</a></li>
+            <li><a href="#">Barcelona</a></li>
+            <li><a href="#">Las Palmgas</a></li>
+            <li><a href="#">Madrid</a></li>
+            <li><a href="#">Valencia</a></li>
+            <li><a href="#">Más ciudades</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Tipos de desayuno</h4>
+          <h4>Tipos de comida</h4>
           <ul>
-            <li><a href="restaurants.html">Vegano</a></li>
-            <li><a href="restaurants.html">Caliente</a></li>
-            <li><a href="restaurants.html">Frío</a></li>
-            <li><a href="restaurants.html">Goloso</a></li>
+            <li><a href="#">Pizza a domicilio</a></li>
+            <li><a href="#">Hamburgesas a domicilio</a></li>
+            <li><a href="#">Desayunos a domicilio</a></li>
+            <li><a href="#">Mas tipos de comida</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Mas buscados</h4>
           <ul>
-            <li><a href="restaurants.html">Croissant con café con leche</a></li>
-            <li><a href="restaurants.html">Bocadillos</a></li>
-            <li><a href="restaurants.html">Combinaciones</a></li>
-            <li><a href="restaurants.html">Nuestros especiales</a></li>
+            <li><a href="#">Burger King</a></li>
+            <li><a href="#">KFC</a></li>
+            <li><a href="#">365 cafe</a></li>
+            <li><a href="#">Telepizza</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
           <h4>Sobre nosotros</h4>
           <ul>
-            <li><a href="about.html">Quienes somos</a></li>
-            <li><a href="about.html">Ayuda</a></li>
-            <li><a href="about.html">Garantia de precio</a></li>
-            <li><a href="about.html">Politica de privacidad i cookies</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Garantia de precio</a></li>
+            <li><a href="#">Politica de privacidad i cookies</a></li>
           </ul>
         </div>
         <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
           <h4>Newsletter</h4>
           <p>Puedes confiar en nosotros. solo enviamos ofertas promocionales,</p>
+
           <div class="form-wrap" id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
               <div class="input-group">
@@ -271,9 +282,11 @@
               <div style="position: absolute; left: -5000px;">
                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
               </div>
+
               <div class="info"></div>
             </form>
           </div>
+
         </div>
       </div>
     </div>

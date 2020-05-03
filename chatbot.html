@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Break-eat -- Restaurants</title>
+    <link rel="icon" href="img/pestaña.png" type="image/png">
+
+    <!--================ Barra superior =================-->
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <!--================ Iconos social =================-->
+    <!-- <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css"> -->
+    <!--================ Botones para mover el carrousel =================-->
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/Magnific-Popup/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div style="width: 300px; height:450px;border: 0px solid red;">
+        <div id="chat" style="border: 2px solid green;height: 93%;">
+            <ul id="messages">
+
+            </ul>
+        </div>
+        <input type="text" id="newMessage" name="message" style="width: 100%;border: 1px solid black;">
+    </div>
+
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+
+        var chatMsg = ["Hola, soy Break"];
+        const baseURL = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/4a855ecd-02d6-457e-9a4f-6a1914ff9ce0?verbose=true&timezoneOffset=0&subscription-key=6095aeb2393444ef982345802850fbc6";
+
+        $("#messages").append(
+            '<li class="bot-msg"><p>'+ chatMsg[0] +'</p></li>'
+        );
+
+        const intentResponse = {
+            "pedido": "Pedido recibido.", 
+            "many_units": "",
+            "confirmar_pedido": "",
+            "saludo": "Hola!",
+            "restaurantes": "Tenemos una gran variedad de restaurantes, organizados según diversos parámetros. ¿Quieres que te lleve a la página donde podrás verlos todos?",
+            "contacto": "Para contactar con nuestro centro de atención al cliente, puedes enviar un correo a break.eat@gmail.com. ¿Quieres que te muestre todas nuestras vías de contacto?",
+            "carrito": "Te muestro tu carrito actual.",
+            "si": "Genial!",
+            "no": "De acuerdo."
+        };
+
+        function handleNewMsg(msg, type){
+            chatMsg.push(msg);
+            if(chatMsg.length > 8){
+                chatMsg.shift();
+                $('ul#messages li:first-child').remove();
+            }
+            $("#messages").append(
+                '<li class="'+type+'-msg"><p>'+ msg +'</p></li>'
+            );
+        }
+
+        var waitingForResp = false;
+        var gotoUrl = "";
+
+        function getLUISresponse(input){
+
+            userMsg = encodeURI(input);
+
+            $.get(baseURL + '&q=' + userMsg, (data, err) => {
+                console.log(data);
+                
+                var currIntent = data.topScoringIntent.intent;
+                var currEntity = data.entities[0] ? data.entities[0].entity : null;
+                var msg = intentResponse[currIntent];
+                
+
+                if(currIntent == "restaurantes"){
+                    waitingForResp = true;
+                    gotoUrl = "restaurants.html";
+                }else if(currIntent == "contacto"){
+                    waitingForResp = true;
+                    gotoUrl = "contact.html";
+                }else if(currEntity == "si"){
+                    msg = intentResponse[currEntity];
+                    setTimeout(() => {
+                        window.parent.location.href = gotoUrl;
+                    }, 2000)
+                }else if(currEntity == "no"){
+                    msg = intentResponse[currEntity];
+                    waitingForResp = false;
+                    gotoUrl = "";
+                }else{
+                    waitingForResp = false;
+                    gotoUrl = "";
+                }
+
+                handleNewMsg(msg, "bot");
+            });
+
+        }
+
+        document.getElementById('newMessage').onkeypress = function(e){
+        if (!e) e = window.event;
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == '13'){
+          // Enter pressed
+          var msg = document.getElementById('newMessage').value;
+          if(msg !== ""){
+            document.getElementById('newMessage').value = "";
+
+            handleNewMsg(msg, "user");
+
+            getLUISresponse(msg);
+          }
+          return false;
+        }
+      }
+    </script>
+</body>
+
+</html>
