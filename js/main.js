@@ -102,7 +102,7 @@ $(function() {
 
     var restArr = [
         {
-            "restName": "Ca la Pepi",
+            "restName": "Cafetería Ágora",
             "imgUrl": "./img/restaurant_logo_1.png",
             "id": 1,
             "free_delivery": true,
@@ -112,7 +112,7 @@ $(function() {
             "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },
         {
-            "restName": "Ca la Pepa",
+            "restName": "Cafetería Al Capone",
             "imgUrl": "./img/restaurant_logo_2.png",
             "id": 2,
             "free_delivery": false,
@@ -121,8 +121,8 @@ $(function() {
             "above5Stars": false,
             "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },{
-            "restName": "Ca la Pepu",
-            "imgUrl": "./img/restaurant_logo_1.png",
+            "restName": "Cafetería El Pasaje",
+            "imgUrl": "./img/restaurant_logo_3.png",
             "id": 3,
             "free_delivery": false,
             "open_time": 9,
@@ -130,8 +130,8 @@ $(function() {
             "above5Stars": false,
             "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },{
-            "restName": "Ca la Pepu",
-            "imgUrl": "./img/restaurant_logo_1.png",
+            "restName": "Cafetería Época",
+            "imgUrl": "./img/restaurant_logo_4.png",
             "id": 4,
             "free_delivery": true,
             "open_time": 9,
@@ -139,8 +139,8 @@ $(function() {
             "above5Stars": false,
             "direction": "Carrer Eivissa, 10, 08110 Montcada i Reixac, Barcelona"
         },{
-            "restName": "Ca la Pepu",
-            "imgUrl": "./img/restaurant_logo_1.png",
+            "restName": "Cafetería los Amigos",
+            "imgUrl": "./img/restaurant_logo_5.png",
             "id": 5,
             "free_delivery": false,
             "open_time": 9,
