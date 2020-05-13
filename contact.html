@@ -40,37 +40,17 @@
               <li id="nav-about" class="nav-item "><a class="nav-link" href="about.html">Sobre nosotros</a></li>
               <li id="nav-profile" class="nav-item"><a class="nav-link" href="login.html">Perfil</a></li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link" data-toggle="dropdown" role="button"> <img src="img/carrito24.png"> 2 - Items <span class="caret"></span></a>
+                <a href="#" class="nav-link" data-toggle="dropdown" role="button"> <img src="img/carrito24.png"> 0 - Items <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-cart" role="menu">
                   <li>
-                    <span class="item">
-                      <span class="item-left">
-                        <span class="item-info">
-                          <span>Bocadillo de Bacon</span>
-                          <span>20 €</span>
-                        </span>
-                      </span>
-                      <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                      </span>
-                    </span>
+
                   </li>
                   <li>
-                    <span class="item">
-                      <span class="item-left">
-                        <span class="item-info">
-                          <span>Cafe con leche</span>
-                          <span>20 €</span>
-                        </span>
-                      </span>
-                      <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                      </span>
-                    </span>
+                    <p style="margin-right: 60px;margin-left: 60px;margin-top: 5px;">Carrito vacio</p>
                   </li>
-                  <li class="divider"></li>
                   <hr>
-                  <a class="button" href="payment.html" style="margin-left: 25px; font-size:16px;margin-right: 25px;padding-left: 30px;padding-right: 25px;">Confirmar pedido</a>
+                  <li class="divider"></li>
+                  <a class="button" href="paymentVacio.html" style="margin-left: 25px; font-size:16px;margin-right: 30px;padding-left: 25px;padding-right: 25px;">Confirmar pedido</a>
                 </ul>
               </li>
             </ul>
@@ -88,7 +68,7 @@
         <h1 class="hero-title">Contacta con nosotros</h1>
         <p>Tienes algun problema con un pedido?. Haznoslo saber y buscaremos la solucion lo antes posible. Estamos en contacto las 24h<br class="d-none d-xl-block"> </p>
         <ul class="hero-info d-none d-md-block">
-		            <li>
+          <li>
             <img src="img/banner/support-icon.png" alt="">
             <h4>Soporte 24h</h4>
           </li>
@@ -210,22 +190,35 @@
   </section>
   <!-- ================ contact section end ================= -->
 
-<!--==================Chatbot ==============================-->
-<div style="right: 0px; border: 0px none; height: 450px; position: fixed; width: 300px; overflow: hidden; bottom: 0px;">
-  <div style="overflow: hidden;">
+  <!--==================Chatbot ==============================-->
+  <div style="right: 0px; border: 0px none; height: 450px; position: fixed; width: 300px; overflow: hidden; bottom: 0px;">
+    <div style="overflow: hidden;">
+    </div>
+    <iframe src="./chatbot.html" scrolling="no" style="height: 450px; border: 0px none; width: 300px; margin-bottom: 0px;">
+    </iframe>
   </div>
-  <iframe src="./chatbot.html" scrolling="no" style="height: 450px; border: 0px none; width: 300px; margin-bottom: 0px;">
-  </iframe>
-</div>
 
 
 
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
-    <div class="container">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+      <!-- Grid row -->
       <div class="row">
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Ciudades</h4>
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Break-Eat</h5>
+          <p>Disfruta de nuestros servicios de desayunos a domicilio donde y cuando quieras.<br>
+            Sin limites!</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto single-footer-widget">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Ciudades</h5>
           <ul>
             <li><a href="restaurants.html">Barcelona</a></li>
             <li><a href="restaurants.html">Girona</a></li>
@@ -233,35 +226,24 @@
             <li><a href="restaurants.html">Lleida</a></li>
           </ul>
         </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Tipos de desayuno</h4>
-          <ul>
-            <li><a href="restaurants.html">Vegano</a></li>
-            <li><a href="restaurants.html">Caliente</a></li>
-            <li><a href="restaurants.html">Frío</a></li>
-            <li><a href="restaurants.html">Goloso</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Mas buscados</h4>
-          <ul>
-            <li><a href="restaurants.html">Croissant con café con leche</a></li>
-            <li><a href="restaurants.html">Bocadillos</a></li>
-            <li><a href="restaurants.html">Combinaciones</a></li>
-            <li><a href="restaurants.html">Nuestros especiales</a></li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Sobre nosotros</h4>
-          <ul>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto single-footer-widget">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sobre Nosotros</h5>
+          <ul class="list-unstyled">
             <li><a href="about.html">Quienes somos</a></li>
             <li><a href="about.html">Ayuda</a></li>
             <li><a href="about.html">Garantia de precio</a></li>
             <li><a href="about.html">Politica de privacidad i cookies</a></li>
           </ul>
         </div>
-        <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
-          <h4>Newsletter</h4>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto single-footer-widget">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sobre Nosotros</h5>
           <p>Puedes confiar en nosotros. solo enviamos ofertas promocionales,</p>
           <div class="form-wrap" id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
@@ -280,9 +262,11 @@
             </form>
           </div>
         </div>
+        <!-- Grid column -->
       </div>
+      <!-- Grid row -->
     </div>
-    </div>
+    <!-- Footer Links -->
   </footer>
   <!-- ================ End footer Area ================= -->
 
