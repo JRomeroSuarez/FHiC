@@ -7,9 +7,64 @@ var filterOptions = {
 
 var showAll = true;
 
+function reply_click(id){
+    var myList = document.getElementById("removeFromCarrito"+id.split("remove")[1]);
+    myList.innerHTML = '';
+
+    var comparatorId = parseInt(id.split("remove")[1]);
+    var storage = sessionStorage.getItem("carrito");
+    var updatedProd = [];
+    if(storage){
+        var carritoArr = storage.split("%%%%%");
+        carritoArr.forEach(str => {
+            var prod = JSON.parse(str);
+            if(prod.carr_id !== comparatorId){
+                updatedProd.push(prod);
+            }
+        });
+
+        var storageString = "";
+        sessionStorage.removeItem("carrito");
+        updatedProd.forEach(prod => {
+            storageString += JSON.stringify(prod);
+            storageString += "%%%%%";
+        });
+        storageString = storageString.substr(0,storageString.length-5);
+        sessionStorage.setItem("carrito",storageString);
+    }
+
+}
+
 
 $(function() {
   "use strict";
+
+  var storage = sessionStorage.getItem("carrito");
+  if(storage){
+    var carritoArr = storage.split("%%%%%");
+    var prod;
+    carritoArr.forEach(str => {
+        prod = JSON.parse(str);
+        console.log(prod);
+        //carritoProds.push(prod);
+        $("#carritoProducts").append(
+            '<li id="removeFromCarrito' + prod.carr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+prod.prodName+'</span> \
+                  <span>'+prod.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+prod.carr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+    });
+  }
 
   var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------

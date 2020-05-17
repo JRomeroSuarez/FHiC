@@ -73,35 +73,10 @@
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted">Tu carrito</span>
-          <span class="badge badge-secondary badge-pill">2</span>
+          <span class="badge badge-secondary badge-pill" id="numItems" >2</span>
         </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">Bocadillo de Bacon</h6>
-              <small class="text-muted">Pan y bacon</small>
-            </div>
-            <span class="text-muted">20 €</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">Cafe con leche</h6>
-              <small class="text-muted">Cafe, leche y azucar</small>
-            </div>
-            <span class="text-muted">20 €</span>
-          </li>
-
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Codigo de promocion</h6>
-              <small>BREAK-EAT</small>
-            </div>
-            <span class="text-success">-5€</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (EUR)</span>
-            <strong>35 €</strong>
-          </li>
+        <ul class="list-group mb-3" id="productsCarrito">
+          
         </ul>
 
         <form class="card p-2">
@@ -274,6 +249,92 @@
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         'use strict';
+
+
+
+
+
+
+
+
+        var storage = sessionStorage.getItem("carrito");
+        $("#numItems")[0].innerHTML = 0;
+        if(storage){
+          var carritoArr = storage.split("%%%%%");
+          console.log("tenim "+carritoArr.length+" items")
+          $("#numItems")[0].innerHTML = carritoArr.length;
+
+          var prod;
+          var fosc = false;
+          var totalPrice = -5;
+          carritoArr.forEach(str => {
+              prod = JSON.parse(str);
+              if(fosc){
+                $("#productsCarrito").append(
+                '<li class="list-group-item d-flex justify-content-between lh-condensed" style="border: 1px solid black;"> \
+                  <div> \
+                    <h6 class="my-0">'+prod.prodName+'</h6> \
+                    <small class="text-muted">'+prod.desc+'</small> \
+                  </div> \
+                  <span class="text-muted">'+prod.price+' €</span> \
+                </li>'
+              );
+              }else{
+                $("#productsCarrito").append(
+                  '<li class="list-group-item d-flex justify-content-between bg-light" style="border: 1px solid black;"> \
+                    <div> \
+                      <h6 class="my-0">'+prod.prodName+'</h6> \
+                      <small class="text-muted">'+prod.desc+'</small> \
+                    </div> \
+                    <span class="text-muted">'+prod.price+' €</span> \
+                  </li>'
+                );
+              }
+              totalPrice += prod.price;
+              fosc = !fosc;
+          });
+
+          if(fosc){
+            $("#productsCarrito").append(
+            '<li class="list-group-item d-flex justify-content-between bg-condensed" style="border: 1px solid black;">\
+                <div class="text-success">\
+                  <h6 class="my-0">Codigo de promocion</h6>\
+                  <small>BREAK-EAT</small>\
+                </div>\
+                <span class="text-success">-5€</span>\
+              </li>\
+              <li class="list-group-item d-flex justify-content-between" style="border: 1px solid black;">\
+                <span>Total (EUR)</span>\
+                <strong>'+totalPrice+' €</strong>\
+              </li>');
+          }else{
+            $("#productsCarrito").append(
+            '<li class="list-group-item d-flex justify-content-between bg-light" style="border: 1px solid black;">\
+                <div class="text-success">\
+                  <h6 class="my-0">Codigo de promocion</h6>\
+                  <small>BREAK-EAT</small>\
+                </div>\
+                <span class="text-success">-5€</span>\
+              </li>\
+              <li class="list-group-item d-flex justify-content-between" style="border: 1px solid black;">\
+                <span>Total (EUR)</span>\
+                <strong>'+totalPrice+' €</strong>\
+              </li>');
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to

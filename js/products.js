@@ -69,6 +69,42 @@ $(function() {
     },
   ];
 
+  var carritoProds = [];
+
+  var storage = sessionStorage.getItem("carrito");
+  if(storage){
+    var carritoArr = storage.split("%%%%%");
+    var prod;
+    var fosc = false;
+    var totalPrice = -5;
+    carritoArr.forEach(str => {
+      prod = JSON.parse(str);
+      carritoProds.push(prod);
+    });
+  }
+
+  function findProduct(id){
+    var res;
+    prodArr.forEach(prodInfo => {
+      if(prodInfo.id == id){
+        res = prodInfo;
+      }
+    });
+
+    return res;
+  }
+
+  function addSessionStorage(){
+    var storageString = "";
+    sessionStorage.removeItem("carrito");
+    carritoProds.forEach(prod => {
+      storageString += JSON.stringify(prod);
+      storageString += "%%%%%";
+    });
+    storageString = storageString.substr(0,storageString.length-5);
+    sessionStorage.setItem("carrito",storageString);
+  }
+
   function renderProd() {
 
     $("#prod-list").empty();
@@ -95,7 +131,7 @@ $(function() {
                                     <button id="minus' + prodInfo.id + '" style="width: 25px;" >-</button> \
                                 </div> \
                                 <div> \
-                                    <button type="button" class="btn btn-outline-danger " data-toggle="popover" title="Popover title" data-content="PIPO" > \
+                                    <button type="button" id="addProduct'+ prodInfo.id +'" class="btn btn-outline-danger " data-toggle="popover" title="Popover title" data-content="PIPO" > \
                                         <img src="../img/carrito24.png" /> \
                                     </button> \
                                 </div> \
@@ -105,6 +141,181 @@ $(function() {
           added = true;
         }
       });
+    });
+
+    $("#addProduct1").click(() => {
+      
+      var currProd = findProduct(1);
+
+      var numProd = parseInt($("#quant1")[0].innerHTML);
+
+      for(i=0;i<numProd;i++){
+        var nextId = sessionStorage.getItem("nextId");
+        var curr_id = nextId ? parseInt(nextId) : 1;
+        currProd = JSON.parse(JSON.stringify(currProd));
+        currProd.carr_id = curr_id;
+        carritoProds.push(currProd);
+        $("#carritoProducts").append(
+          '<li id="removeFromCarrito' + curr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+currProd.prodName+'</span> \
+                  <span>'+currProd.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+curr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+        curr_id += 1;
+        sessionStorage.removeItem("nextId");
+        sessionStorage.setItem("nextId",curr_id.toString())
+      }
+      addSessionStorage();
+    });
+
+    $("#addProduct2").click(() => {
+      
+      var currProd = findProduct(2);
+
+      var numProd = parseInt($("#quant2")[0].innerHTML);
+
+      for(i=0;i<numProd;i++){
+        var nextId = sessionStorage.getItem("nextId");
+        var curr_id = nextId ? parseInt(nextId) : 1;
+        currProd = JSON.parse(JSON.stringify(currProd));
+        currProd.carr_id = curr_id;
+        carritoProds.push(currProd);
+        $("#carritoProducts").append(
+          '<li id="removeFromCarrito' + curr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+currProd.prodName+'</span> \
+                  <span>'+currProd.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+curr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+        curr_id += 1;
+        sessionStorage.removeItem("nextId");
+        sessionStorage.setItem("nextId",curr_id.toString())
+      }
+      addSessionStorage();
+    });
+
+    $("#addProduct3").click(() => {
+      
+      var currProd = findProduct(3);
+
+      var numProd = parseInt($("#quant3")[0].innerHTML);
+
+      for(i=0;i<numProd;i++){
+        var nextId = sessionStorage.getItem("nextId");
+        var curr_id = nextId ? parseInt(nextId) : 1;
+        currProd = JSON.parse(JSON.stringify(currProd));
+        currProd.carr_id = curr_id;
+        carritoProds.push(currProd);
+        $("#carritoProducts").append(
+          '<li id="removeFromCarrito' + curr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+currProd.prodName+'</span> \
+                  <span>'+currProd.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+curr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+        curr_id += 1;
+        sessionStorage.removeItem("nextId");
+        sessionStorage.setItem("nextId",curr_id.toString())
+      }
+      addSessionStorage();
+    });
+
+    $("#addProduct4").click(() => {
+      
+      var currProd = findProduct(4);
+
+      var numProd = parseInt($("#quant4")[0].innerHTML);
+
+      for(i=0;i<numProd;i++){
+        var nextId = sessionStorage.getItem("nextId");
+        var curr_id = nextId ? parseInt(nextId) : 1;
+        currProd = JSON.parse(JSON.stringify(currProd));
+        currProd.carr_id = curr_id;
+        carritoProds.push(currProd);
+        $("#carritoProducts").append(
+          '<li id="removeFromCarrito' + curr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+currProd.prodName+'</span> \
+                  <span>'+currProd.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+curr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+        curr_id += 1;
+        sessionStorage.removeItem("nextId");
+        sessionStorage.setItem("nextId",curr_id.toString())
+      }
+      addSessionStorage();
+    });
+
+    $("#addProduct5").click(() => {
+      
+      var currProd = findProduct(5);
+
+      var numProd = parseInt($("#quant5")[0].innerHTML);
+
+      for(i=0;i<numProd;i++){
+        var nextId = sessionStorage.getItem("nextId");
+        var curr_id = nextId ? parseInt(nextId) : 1;
+        currProd = JSON.parse(JSON.stringify(currProd));
+        currProd.carr_id = curr_id;
+        carritoProds.push(currProd);
+        $("#carritoProducts").append(
+          '<li id="removeFromCarrito' + curr_id + '"> \
+            <span class="item"> \
+              <span class="item-left"> \
+                <span class="item-info"> \
+                  <span>'+currProd.prodName+'</span> \
+                  <span>'+currProd.price+' €</span> \
+                </span> \
+              </span> \
+              <span class="item-right"> \
+                <button class="btn btn-xs btn-danger pull-right" id="remove'+curr_id+'" onClick="reply_click(this.id)" >x</button> \
+              </span> \
+            </span> \
+          </li> \
+          '
+        );
+        curr_id += 1;
+        sessionStorage.removeItem("nextId");
+        sessionStorage.setItem("nextId",curr_id.toString())
+      }
+      addSessionStorage();
     });
 
     $("#plus1").click(() => {
@@ -176,7 +387,7 @@ $(function() {
       if (currVal >= 99) {
         alert("S'ha arribat al màxim d'items que es poden demanar en una sola comanda. Per a més informació, contacti amb el nostre correu.");
       } else {
-        $("#quant3")[0].innerHTML = (currVal + 1).toString();
+        $("#quant4")[0].innerHTML = (currVal + 1).toString();
       }
     });
 
